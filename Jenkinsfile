@@ -1,7 +1,7 @@
 pipeline{
     agent any
         stages{
-            stage('Build')
+            stage('Build'){
                 steps{
                     sh 'cd coit-backend1'
                     sh 'docker build -t chakri4/coit-backend1:1.0.0 -f Docker-multistagefile .'
