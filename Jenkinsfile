@@ -3,7 +3,7 @@ pipeline{
         stages{
             stage('Build'){
                 steps{
-                    sh 'cd coit-backend1'
+                    // sh 'cd coit-backend1'
                     sh 'docker build -t chakri4/coit-backend1:1.0.0 -f Docker-multistagefile .'
                     sh 'docker run -d -p 8080:8080 --name coit chakri4/coit-backend1:1.0.0'
                     sh 'sleep 2'
